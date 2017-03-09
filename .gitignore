@@ -1,0 +1,7 @@
+node_modules
+app
+TODO*
+*~
+*.swp
+config/index*
+git

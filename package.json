@@ -1,0 +1,61 @@
+{
+  "name": "reakit-base",
+  "version": "0.0.1",
+  "description": "A basic Scaffold for reakit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marco-souza/reakit-base.git"
+  },
+  "keywords": [
+    "reakit",
+    "react",
+    "scaffold",
+    "reakit-base"
+  ],
+  "author": "Marco Antônio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marco-souza/reakit-base.git"
+  },
+  "homepage": "https://github.com/marco-souza/reakit-base#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^3.0.2",
+    "reakit": "0.0.4",
+    "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.4.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-autobind-class-methods": "^5.0.1",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-preset-env": "^1.2.1",
+    "babel-preset-react": "^6.23.0",
+    "common-config": "git@bitbucket.org:nosebit/common_config_js.git",
+    "css-loader": "^0.26.4",
+    "eslint": "^3.17.1",
+    "eslint-loader": "^1.6.3",
+    "eslint-plugin-react": "^6.10.0",
+    "file-loader": "^0.10.1",
+    "gulp": "^3.9.1",
+    "gulp-file": "^0.3.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-util": "^3.0.8",
+    "style-loader": "^0.13.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  }
+}
