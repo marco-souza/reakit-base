@@ -1,31 +1,24 @@
 import "./styles.styl";
 import React from "react";
-import {Container,Grid} from "reakit";
+import {Container} from "reakit";
+import {
+    BrowserRouter as Router,
+    Route
+} from "react-router-dom";
+import Home from "./home";
+import About from "./about";
+import Menu from "./menu";
 
 class App extends React.Component{
     render() {
         return (
-            <Container>
-                <Grid>
-                <Grid.Cell>
-                    <div style={{marginBottom: "20pt", padding: 10 + "pt", background: "#f5f5f5"}}>
-                        One
-                    </div>
-                </Grid.Cell>
-
-                <Grid.Cell span={2}>
-                    <div style={{marginBottom: "20pt", padding: 10 + "pt", background: "#f5f5f5"}}>
-                        Two
-                    </div>
-                </Grid.Cell>
-
-                <Grid.Cell>
-                    <div style={{marginBottom: "20pt", padding: 10 + "pt", background: "#f5f5f5"}}>
-                        Three
-                    </div>
-                </Grid.Cell>
-            </Grid>
-            </Container>
+            <Router>
+                <Container>
+                    <Menu />
+                    <Route exact path='/' component={Home} />
+                    <Route path='/about' component={About} />
+                </Container>
+            </Router>
         );
     }
 }

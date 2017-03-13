@@ -2,7 +2,7 @@ let path = require('path');
 
 module.exports = {
     app: {
-        dest: path.resolve(__dirname, 'app'),
+        dest: path.resolve(__dirname, 'dist'),
 
         src: {
             main_js: './src/main.jsx',
