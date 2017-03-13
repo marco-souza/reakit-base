@@ -3,6 +3,9 @@ let path                = require("path"),
     config              = require("../gulp.config").app;
 
 module.exports = {
+    devServer: {
+        historyApiFallback: true
+    },
     entry: {
         // Entry point os applications
         main: config.src.main_js,
