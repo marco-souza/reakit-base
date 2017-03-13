@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 """Reakit Script for automate some tasks when work with Reakit Base"""
-import lib.utils as utils
+import pylib.utils as utils
 from sys import argv
 
 class reakit_manager:
