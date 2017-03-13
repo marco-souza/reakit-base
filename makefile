@@ -14,7 +14,7 @@ dev:
 	NODE_PATH=${NODE_PATH} NODE_ENV=development gulp
 
 server:
-	NODE_ENV=development node_modules/.bin/webpack-dev-server --config webpack/dist.config.js --content-base app
+	NODE_ENV=development node_modules/.bin/webpack-dev-server --config webpack/dist.config.js --content-base dist
 
 test:
 	NODE_PATH=${NODE_PATH} NODE_ENV=test gulp

@@ -1,0 +1,60 @@
+#! /usr/bin/env python3
+"""Reakit Script for automate some tasks when work with Reakit Base"""
+import lib.utils as utils
+from sys import argv
+
+class reakit_manager:
+    def create_component(self, name):
+
+        print(name)
+        if name:
+            name = name.lower()
+            class_name = utils.camel_case(name)
+
+            # Create dir
+            utils.execute('mkdir ./src/app/' + name)
+
+            # Create Component
+            base_jsx = '\
+import React from "react"; \n\
+import Reakit from "reakit"; \n\
+import "./styles.styl"; \n\n\n\
+class ' + class_name + ' extends React.Component {\n\n\
+    state = {}\n\n\
+    render(){\n\
+        return (\n\
+            <div id="' + name + '">\n\
+                {/* Your Code Here */}\n\
+            </div>\n\
+        )\n\
+    }\n\
+}\n\n\
+export default ' + class_name + ';\
+            '
+            base_styl = '\
+.' + name + '\n\
+     text-align: center;\
+            '
+
+            comp_jsx = open('src/app/' + name + '/index.jsx', 'w+');
+            comp_jsx.write(base_jsx)
+
+            comp_styl = open('src/app/' + name + '/styles.styl', 'w+');
+            comp_styl.write(base_styl)
+
+            print("Component" + name + " created successfully!")
+
+
+# Execute in case is a Shell call, not imported
+if __name__ == "__main__":
+    if len(argv) == 1:
+        print("Usage: reakit-manager server|comp <name>")
+
+    else:
+        if argv[1] == "comp" and len(argv) == 3:
+            print('Creating Component...')
+            rkm = reakit_manager()
+            rkm.create_component(argv[2])
+
+        elif argv[1] == "server":
+            utils.execute('make server')
